@@ -61,14 +61,24 @@ h1
         &::after
             display: none
 
+    @media screen and ( max-width: 700px )
+        top: 30px
+        right: 20px
+        width: 60px
+        height: 60px
+
 .face
     position: absolute
     top: 0
     left: 0
     width: 200px
-    aspect-ratio: 1/1
+    height: 200px
     object-fit: contain
     animation: face 20s linear infinite alternate-reverse
+    @media screen and ( max-width: 700px )
+        width: 100px
+        height: 100px
+        animation: face2 20s linear infinite alternate-reverse
 
 .roket
     position: absolute
@@ -78,7 +88,10 @@ h1
     aspect-ratio: 1/1
     object-fit: contain
     pointer-events: none
-    animation: roket 8s ease infinite 
+    animation: roket 8s ease infinite
+    @media screen and ( max-width: 700px )
+        width: 100px
+        animation: roket2 8s ease infinite
 
 .wrap
     display: flex
@@ -88,6 +101,7 @@ h1
     a
         display: inline-block
         padding: 10px
+        border-radius: 15px
         img
             display: block
             max-width: 40px
@@ -96,15 +110,23 @@ h1
             img
                 max-width: 42px
 
+        &:hover
+            background-color: rgba(white, .1)
+            transform: scale(1.05)
+
 .footer
-    width: 90%
+    width: 99%
     padding: 20px 0 30px
     border-radius: 90px 90px 0 0
     max-width: 600px
     margin: 0 auto
     background-color: rgba(0, 0, 0, .1)
-    backdrop-filter: blur(14px)
+    backdrop-filter: blur(10px)
     border: 1px solid rgba(0, 0, 0, .5)
+    border-bottom: none
+
+    @media screen and ( max-width: 700px )
+        border-radius: 40px 40px 0 0
 
 @keyframes sound
     0%
@@ -123,6 +145,11 @@ h1
         transform: translate(-100px, 200px)
     100%
         transform: translate(80vw, -100vh)
+@keyframes roket2
+    0%
+        transform: translate(-100px, 200px) rotate(-15deg)
+    100%
+        transform: translate(80vw, -100vh) rotate(-15deg)
 
 @keyframes face
     0%
@@ -135,6 +162,18 @@ h1
         transform: translate(1vw, 60vh)
     80%
         transform: translate(calc( 100vw - 200px ), calc( 100vh - 200px ))
+
+@keyframes face2
+    0%
+        transform: translate(calc( 100vw - 100px ), 1vh)
+    20%
+        transform: translate(1vw, 20vh)
+    40%
+        transform: translate(calc( 100vw - 100px ), 50vh)
+    60%
+        transform: translate(1vw, 60vh)
+    80%
+        transform: translate(calc( 100vw - 100px ), calc( 100vh - 100px ))
 
 @media screen and ( max-width: 920px )
     main
