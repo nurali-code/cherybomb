@@ -1,0 +1,86 @@
+@import 'normolize'
+@import 'fonts'
+@import 'elements'
+
+main
+    position: relative
+    z-index: 1
+    min-height: 100vh
+    min-height: 100lvh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+    background-image: url('../img/bg.jpg')
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+    padding: 0 22px 0
+    overflow: hidden
+
+.top
+    margin: auto 0
+
+h1
+    font-size: 0
+    margin: 0 0 20px
+    img
+        width: 100%
+        max-width: 525px
+
+.roket
+    position: absolute
+    bottom: 0
+    left: 10%
+    width: 200px
+    aspect-ratio: 1/1
+    object-fit: contain
+    // transform: translate(100px, 200px)
+
+    animation: roket 8s ease infinite 
+
+.wrap
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 10px
+    a
+        display: inline-block
+        padding: 10px
+        img
+            display: block
+            max-width: 40px
+
+        &:last-child
+            img
+                max-width: 41px
+
+.footer
+    width: 90%
+    padding: 20px 0 30px
+    border-radius: 100px 100px 0 0
+    max-width: 600px
+    margin: 0 auto
+    background-color: rgba(0, 0, 0, .1)
+    backdrop-filter: blur(14px)
+    border: 1px solid #000
+
+@keyframes roket
+    0%
+        transform: translate(-200px, 180px)
+    100%
+        transform: translate(80vw, -100vh)
+
+@media screen and ( max-width: 920px )
+    main
+        padding: 50px 20px 0
+
+@media screen and ( max-width: 710px )
+    .btn
+        font-size: 22px
+        i
+            display: none
+
+        img
+            width: 20px

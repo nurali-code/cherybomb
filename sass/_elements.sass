@@ -1,0 +1,91 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+$prime: #762aa5
+$second: #000
+
+html,
+body
+    cursor: none
+
+.cursorSmall
+    display: none
+    @media screen and ( min-width: 900px )
+        display: block
+        position: absolute
+        width: 30px
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 1
+        pointer-events: none
+
+body
+    min-height: 100vh
+    color: #fff
+    font-size: 14px
+    background-color: #000
+    font-family: sans-serif
+    position: relative
+    z-index: 1
+
+    &.active
+        overflow: hidden
+
+img
+    max-width: 100%
+
+a,
+button
+    color: #fff
+    text-decoration: none
+    transition: all ease .2s
+    background-color: transparent
+    cursor: none
+    &:active
+        transform: scale(.98)
+
+.btn
+    display: inline-block
+    font-size: 20px
+    font-style: normal
+    font-weight: 500
+    line-height: 150%
+    // border: 1px solid black
+    padding: 37px 82px 40px 32px
+    text-align: center
+    border-radius: 50px
+    color: black
+    position: relative
+    z-index: 1
+    overflow: hidden
+    background-image: url('../img/btn.gif')
+    background-repeat: no-repeat
+    background-size: 100% 100%
+
+    i
+        font-style: normal
+
+    &:hover
+        &::after
+            opacity: 1
+
+    &:active
+
+    img
+        width: 25px
+        display: inline-block
+        position: absolute
+        top: 49%
+        transform: translateY(-50%)
+        right: 40px
+
+@keyframes opac
+    0%
+        opacity: 0
+    100%
+        opacity: 1
