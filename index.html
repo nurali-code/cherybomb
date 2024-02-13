@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TopSol</title>
+    <title>Cherry bomb</title>
     <meta name="theme-color" content="#1c1d1f" />
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1c1d1f" />
-    <!-- <link rel="shortcut icon" href="favicon.svg" type="image/x-icon"> -->
 
     <link rel="stylesheet" href="./css/style.css">
 
@@ -25,18 +24,20 @@
                 <img src="img/ic-copy.svg" alt="copy">
             </button>
         </div>
+        <button class="sound" id="soundBtn"><audio id="audio" src="cherry.mp3" loop></audio></button>
 
         <div class="wrap footer">
+            <a href="#" target="_blank"><img src="img/X.svg" alt="cc"></a>
             <a href="#" target="_blank"><img src="img/cc.png" alt="cc"></a>
             <a href="#" target="_blank"><img src="img/tg.png" alt="tf"></a>
         </div>
 
+        <img src="img/face.gif" alt="face" class="face">
         <img src="img/rocet.gif" alt="rocet" class="roket">
         <div class="cursorSmall"> <img src="img/cursor.png" alt="cursor"></div>
     </main>
 
 
-    <audio src="cherry.mp3" ></audio>
 
     <script>
         const cursorSmall = document.querySelector('.cursorSmall');
@@ -56,6 +57,13 @@
                 .then(function () { alert('Text copied: ' + dataToCopy); })
                 .catch(function (err) { console.error('Failed to copy text:', err); });
         }
+
+        const soundBtn = document.querySelector('#soundBtn');
+        const sound = document.querySelector('#audio');
+        soundBtn.addEventListener('click', function (e) {
+            this.classList.add('is_active');
+            sound.play();
+        })
     </script>
 
 </body>
