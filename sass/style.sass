@@ -58,6 +58,8 @@ h1
         transform: translateY(-50%) rotate(45deg)
 
     &.is_active
+        animation: none
+        opacity: .8
         &::after
             display: none
 
@@ -70,11 +72,11 @@ h1
 .face
     position: absolute
     top: 0
-    left: 0
+    left: -0px
     width: 200px
     height: 200px
     object-fit: contain
-    animation: face 20s linear infinite alternate-reverse
+    animation: face 25s linear infinite alternate-reverse
     @media screen and ( max-width: 700px )
         width: 100px
         height: 100px
@@ -143,7 +145,7 @@ h1
 @keyframes roket
     0%
         transform: translate(-100px, 200px)
-    100%
+    50%
         transform: translate(80vw, -100vh)
 @keyframes roket2
     0%
@@ -155,11 +157,11 @@ h1
     0%
         transform: translate(calc( 100vw - 200px ), 1vh)
     20%
-        transform: translate(1vw, 20vh)
+        transform: translate(0vw, 20vh)
     40%
         transform: translate(calc( 100vw - 200px ), 50vh)
     60%
-        transform: translate(1vw, 60vh)
+        transform: translate(0vw, 60vh)
     80%
         transform: translate(calc( 100vw - 200px ), calc( 100vh - 200px ))
 
@@ -167,11 +169,11 @@ h1
     0%
         transform: translate(calc( 100vw - 100px ), 1vh)
     20%
-        transform: translate(1vw, 20vh)
+        transform: translate(0vw, 20vh)
     40%
         transform: translate(calc( 100vw - 100px ), 50vh)
     60%
-        transform: translate(1vw, 60vh)
+        transform: translate(0vw, 60vh)
     80%
         transform: translate(calc( 100vw - 100px ), calc( 100vh - 100px ))
 
