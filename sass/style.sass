@@ -12,12 +12,13 @@ main
     justify-content: center
     align-items: center
     text-align: center
-    background-image: url('../img/bg.jpg')
     background-repeat: no-repeat
     background-position: center center
     background-size: cover
     padding: 0 22px 0
     overflow: hidden
+    @media screen and ( min-width: 920px )
+        background-image: url('../img/bg.jpg')
 
 .top
     margin: auto 0
@@ -90,7 +91,7 @@ h1
     aspect-ratio: 1/1
     object-fit: contain
     pointer-events: none
-    animation: roket 8s ease infinite 
+    animation: roket 8s ease infinite
     @media screen and ( max-width: 700px )
         width: 100px
         animation: roket2 8s ease infinite
@@ -110,7 +111,7 @@ h1
 
         &:last-child
             img
-                max-width: 42px
+                max-width: 43px
 
         &:hover
             background-color: rgba(white, .1)
@@ -180,6 +181,7 @@ h1
 
 @media screen and ( max-width: 920px )
     main
+        background-image: url('../img/mob.jpg')
         padding: 50px 20px 0
 
 @media screen and ( max-width: 710px )

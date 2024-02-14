@@ -10,7 +10,8 @@ $second: #000
 
 html,
 body
-    cursor: none
+    @media screen and ( min-width: 900px )
+        cursor: none
 
 .cursorSmall
     display: none
@@ -59,16 +60,17 @@ audio
     font-weight: 500
     line-height: 150%
     // border: 1px solid black
-    padding: 45px 82px 40px 32px
+    padding: 45px 65px 40px 32px
     text-align: center
     border-radius: 50px
-    color: black
+    color: #fd3347
     position: relative
     z-index: 1
     overflow: hidden
     background-image: url('../img/btn.gif')
     background-repeat: no-repeat
     background-size: 100% 100%
+    text-shadow: -1px 1px #000000, -2px 2px #e8e641
 
     i
         font-style: normal
@@ -81,16 +83,25 @@ audio
 
     img
         width: 25px
-        display: inline-block
+        height: 25px
+        display: block
+
+    span
         position: absolute
         top: 51%
         transform: translateY(-50%)
-        right: 45px
+        right: 0px
+        display: inline-block
+        padding: 15px
+        background-color: rgba(0, 0, 0, .1)
+        backdrop-filter: blur(5px)
+        border: 1px solid rgba(0, 0, 0, .5)
+        border-radius: 50%
 
     @media screen and ( max-width: 700px )
-        padding: 45px 72px 40px 32px
-        img
-            right: 40px
+        padding: 45px 60px 40px 32px
+        span
+            right: 0
 
 @keyframes opac
     0%
